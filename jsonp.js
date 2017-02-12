@@ -52,10 +52,8 @@ export let jsonp_util = {
         return true;
     },
     remove_script(id) {
-        ( document.querySelector(`.jsonp[data-id="${id}"]`) )
+        return ( document.querySelector(`.jsonp[data-id="${id}"]`) )
             ? script.remove()
-            : return false;
-
-        return true;
+            : false;
     }
 };
