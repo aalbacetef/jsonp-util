@@ -46,6 +46,13 @@ jsonp(url, (data) => console.log(data), { param: val } );
 ```Type: string```
 URL for the request. ```www.example.com/api/search/```
 
+#### callback
+``` Type: function```
+
+Function to be called once the JSONP response is received.
+
+jsonp-util supports k-ary arguments, but the first argument will be the data object returned by the JSONP response.
+
 
 #### params
 ```Type: object```
@@ -65,14 +72,6 @@ the following string will be produced:
 ```javascript
 key_1=val_1&...&key_n=val_n
 ```
-
-#### callback
-``` Type: function```
-
-Function to be called once the JSONP response is received.
-
-jsonp-util supports k-ary arguments, but the first argument will be the data object returned by the JSONP response.
-
 
 
 
